@@ -1,0 +1,27 @@
+$font-main: 'Work Sans', sans-serif;
+$font-heading: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+$font-size-base: 14px;
+
+$blue: #5694f1;
+$blue-light: #5badf0;
+$grey: #333;
+$pink: #eb298c;
+$red: #d9534f;
+
+// Screen size.
+$screen-xs: 480px;
+$screen-sm: 768px;
+
+// Wrapper.
+$wrapper-padding: 20px;
+$wrapper-max-width: 800px;
+
+// Heading.
+$heading-normal-color: #333;
+$heading-active-color: $blue;
+
+// Buttons.
+$btn-default-color: #666;
+$btn-border-radius: 3px;
+$btn-primary-color: $blue-light;
+$btn-error-color: $red;

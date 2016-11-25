@@ -1,0 +1,43 @@
+.navbar {
+  @include clearfix;
+  text-align: center;
+  margin-top: $wrapper-padding;
+}
+
+.navbar-toggle {
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
+
+  li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.navbar-open {
+  .navbar-toggle {
+    @extend .btn-error;
+  }
+
+  .navbar-nav {
+    max-height: 700px;
+    transition: max-height 0.25s ease-in;
+  }
+}

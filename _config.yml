@@ -1,0 +1,40 @@
+title: Risan Bagja
+description: >
+  I'm a <span class="highlight">web developer</span> that can turn coffee into code
+logo: "https://avatars3.githubusercontent.com/u/3825242?v=3&s=460"
+
+# Serving.
+port: 4001
+host: localhost
+baseurl: ""
+url: ""
+
+# Configuration.
+lang: en
+encoding: "utf-8"
+timezone: "Europe/Stockholm"
+markdown: kramdown
+paginate: 5
+liquid:
+  error_mode: strict
+
+# Plugins.
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Directories.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - yarn.lock
+keep_files:
+  - .git
+  - assets
+
+email: risanbagja@gmail.com
+twitter_username: jekyllrb
+github_username:  jekyll

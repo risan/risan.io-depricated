@@ -1,0 +1,39 @@
+.wrapper-index {
+  article {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  header {
+    margin-bottom: 0.7rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0 0 0.7rem 0;
+
+    a {
+      color: $heading-normal-color;
+
+      &:hover {
+        color: $heading-active-color;
+      }
+    }
+  }
+
+  .post-meta {
+    font-size: 1rem;
+    color: $grey;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 0 0 1rem 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

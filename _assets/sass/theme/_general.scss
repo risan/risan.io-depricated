@@ -1,0 +1,29 @@
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  font-size: 1rem;
+  font-family: $font-main;
+}
+
+h1,
+h2 {
+  font-family: $font-heading;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper-box {
+  max-width: $wrapper-max-width;
+  padding: 0 $wrapper-padding;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  @extend .wrapper-box;
+  margin: 0 auto;
+}
