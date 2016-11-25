@@ -6,7 +6,6 @@ let sourcemaps = require('gulp-sourcemaps');
 
 class Task {
   constructor(options) {
-    this.moduleName = 'CSS';
     this.notifier = new Notifier();
     this.options = options;
     this.options.output = path.parse(this.options.output);
@@ -44,7 +43,7 @@ class Task {
     let self = this;
 
     return function (e) {
-      self.notifier.notifyError(e, `${self.moduleName} task is failed`);
+      self.notifier.notifyError(e, `${self.moduleName()} task is failed`);
 
       if (self.isWatching()) {
         this.emit('end');
@@ -55,7 +54,7 @@ class Task {
   }
 
   onSuccess() {
-    return this.notifier.notifyInfo(`${this.moduleName} task is completed!`);
+    return this.notifier.notifyInfo(`${this.moduleName()} task is completed!`);
   }
 
   stream() {

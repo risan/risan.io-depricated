@@ -1,8 +1,8 @@
-let CssTask = require('./gulp-tasks/CssTask');
+let StyleTask = require('./gulp-tasks/StyleTask');
 let gulp = require('gulp');
 
 gulp.task('styles', function() {
-  return new CssTask({
+  return new StyleTask({
     src: [
       './node_modules/normalize.css/normalize.css',
       './_assets/sass/theme.scss'

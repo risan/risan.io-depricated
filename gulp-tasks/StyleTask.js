@@ -4,7 +4,11 @@ let gulp = require('gulp');
 let Task = require('./Task');
 let sass = require('gulp-sass');
 
-class CssTask extends Task {
+class StyleTask extends Task {
+  moduleName() {
+    return 'styles';
+  }
+
   gulpTask() {
     return gulp
       .src(this.options.src)
@@ -32,4 +36,4 @@ class CssTask extends Task {
   }
 }
 
-module.exports = CssTask;
+module.exports = StyleTask;
