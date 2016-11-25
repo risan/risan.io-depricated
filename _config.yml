@@ -28,6 +28,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - gulpfile.js
+  - gulp-tasks
   - node_modules
   - package.json
   - yarn.lock

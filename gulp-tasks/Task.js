@@ -24,7 +24,7 @@ class Task {
   }
 
   initSourceMaps() {
-    if (!this.options.sourceMaps) {
+    if (this.isInProduction()) {
       return this.stream();
     }
 
@@ -32,7 +32,7 @@ class Task {
   }
 
   writeSourceMaps() {
-    if (!this.options.sourceMaps) {
+    if (this.isInProduction()) {
       return this.stream();
     }
 
