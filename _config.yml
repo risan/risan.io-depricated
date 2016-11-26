@@ -1,23 +1,25 @@
-title: Risan Bagja
-description: >
-  I'm a <span class="highlight">web developer</span> that can turn coffee into code
-logo: "https://avatars3.githubusercontent.com/u/3825242?v=3&s=460"
+title: Risan's Programming Blog
+description: Risan Bagja on software development and coding practice. Tutorials about PHP, Laravel and javascript.
+heading: Risan Bagja
+sub_heading: I'm a <span class="highlight">web developer</span> that can turn coffee into code
+logo: https://avatars3.githubusercontent.com/u/3825242?v=3&s=460
+author: Risan Bagja Pradana
 
 # Serving.
 port: 4001
 host: localhost
 baseurl: ""
-url: "http://localhost:4001"
-css_url: "http://localhost:4001/assets/css"
-js_url: "http://localhost:4001/assets/js"
+url: http://localhost:4001
+css_url: http://localhost:4001/assets/css
+js_url: http://localhost:4001/assets/js
 
 # Configuration.
 lang: en
-encoding: "utf-8"
-timezone: "Europe/Stockholm"
+encoding: utf-8
+timezone: Europe/Stockholm
 markdown: kramdown
 paginate: 5
-paginate_path: "/page/:num"
+paginate_path: /page/:num
 liquid:
   error_mode: strict
 
