@@ -9,6 +9,7 @@
     <main class="wrapper wrapper-index">
         {{ content}}
     </main>
-    <script src="assets/js/scripts.js"></script>
+    {% include pagination.html %}
+    <script src="{{ site.js_url }}/scripts.js"></script>
 </body>
 </html>

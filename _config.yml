@@ -7,7 +7,9 @@ logo: "https://avatars3.githubusercontent.com/u/3825242?v=3&s=460"
 port: 4001
 host: localhost
 baseurl: ""
-url: ""
+url: "http://localhost:4001"
+css_url: "http://localhost:4001/assets/css"
+js_url: "http://localhost:4001/assets/js"
 
 # Configuration.
 lang: en
@@ -15,6 +17,7 @@ encoding: "utf-8"
 timezone: "Europe/Stockholm"
 markdown: kramdown
 paginate: 5
+paginate_path: "/page/:num"
 liquid:
   error_mode: strict
 
