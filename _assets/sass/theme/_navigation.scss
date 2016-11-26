@@ -7,6 +7,10 @@
 .navbar-toggle {
   margin-bottom: 10px;
   width: 100px;
+
+  @media (min-width: $screen-sm) {
+    display: none;
+  }
 }
 
 .navbar-nav {
@@ -17,17 +21,38 @@
   overflow: hidden;
   transition: max-height 0.15s ease-out;
 
+  @media (min-width: $screen-sm) {
+    max-height: 100%;
+    overflow: initial;
+    float: right;
+  }
+
   li {
     font-size: 1rem;
     margin-bottom: 5px;
 
+    @media (min-width: $screen-sm) {
+      font-size: 0.9rem;
+      float: left;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+
     &:last-child {
       margin-bottom: 0;
+
+      @media (min-width: $screen-sm) {
+        margin-right: 0;
+      }
     }
   }
 
   a {
     display: block;
+
+    @media (min-width: $screen-sm) {
+      border-color: transparent;
+    }
   }
 }
 
