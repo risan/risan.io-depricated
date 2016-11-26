@@ -11,6 +11,10 @@
   vertical-align: middle;
   cursor: pointer;
   white-space: nowrap;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn-default {
