@@ -1,6 +1,6 @@
-.header-main {
+.header-index {
   text-align: center;
-  margin: 2rem auto 2rem auto;
+  margin: $header-padding auto;
 
   img {
     width: 100px;
@@ -9,6 +9,7 @@
   }
 
   h1 {
+    font-size: 2rem;
     text-transform: uppercase;
     margin: 0 0 0.5rem 0;
 
@@ -31,5 +32,43 @@
 
   .highlight {
     color: $pink;
+  }
+}
+
+.header {
+  text-align: left;
+  margin: $header-padding auto;
+}
+
+.header-heading {
+  @media (min-width: $screen-sm) {
+    text-align: center;
+  }
+
+  a {
+    color: #fff;
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+    padding: 0.5rem 0.7rem;
+    display: inline-block;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: $btn-border-radius;
+    box-sizing: border-box;
+
+    @media (min-width: $screen-sm) {
+      font-size: 1.2rem;
+      width: auto;
+    }
+
+    &:hover {
+      color: #000;
+      background-color: transparent;
+      border-color: #000;
+    }
   }
 }

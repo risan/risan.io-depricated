@@ -1,16 +1,23 @@
 .navbar {
   @include clearfix;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
 }
 
 .navbar-toggle {
   margin-bottom: 10px;
-  width: 100px;
+  width: 120px;
 
   @media (min-width: $screen-sm) {
     display: none;
+  }
+}
+
+.header {
+  .navbar-toggle {
+    position: absolute;
+    top: $header-padding;
+    right: $wrapper-padding;
   }
 }
 

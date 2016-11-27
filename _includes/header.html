@@ -1,7 +1,8 @@
-<header class="wrapper header-main">
-    <img src="{{ site.logo }}">
-    <h1>
-        <a href="{{ site.url }}">{{ site.heading }}</a>
-    </h1>
-    <h2>{{ site.sub_heading }}</h2>
+<header class="wrapper header">
+    <div class="header-heading">
+        <a href="{{ site.url }}">
+            {{ site.heading }}
+        </a>
+    </div>
+    {% include navigation.html %}
 </header>

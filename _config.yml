@@ -18,10 +18,20 @@ lang: en
 encoding: utf-8
 timezone: Europe/Stockholm
 markdown: kramdown
+permalink: /:title.html
 paginate: 5
 paginate_path: /page/:num
 liquid:
   error_mode: strict
+
+# Front matter defaults.
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 # Plugins.
 gems:

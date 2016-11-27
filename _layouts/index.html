@@ -4,12 +4,11 @@
     {% include head.html %}
 </head>
 <body>
-    {% include header.html %}
-    {% include navigation.html %}
+    {% include header-index.html %}
     <main class="wrapper wrapper-index">
         {{ content}}
     </main>
     {% include pagination.html %}
-    <script src="{{ site.js_url }}/scripts.js"></script>
+    {% include footer.html %}
 </body>
 </html>
