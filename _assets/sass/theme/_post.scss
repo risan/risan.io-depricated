@@ -1,0 +1,31 @@
+.wrapper-post {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin: 0 0 0.7rem 0;
+
+    @media (min-width: $screen-sm) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  header {
+    margin-bottom: 1.8rem;
+  }
+
+  .post-meta {
+    font-size: 1rem;
+    color: $grey-lighter;
+
+    @media (min-width: $screen-sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.8rem;
+    margin: 0 0 1.25rem 0;
+  }
+}

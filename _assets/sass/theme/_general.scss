@@ -18,12 +18,25 @@ h2 {
 }
 
 a {
+  color: $blue-light;
   text-decoration: none;
   transition: all 0.15s ease;
 
   &:hover {
+    color: $pink;
     transition: all 0.25s ease;
   }
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.8rem;
+  margin: 1rem 0;
+}
+
+pre,
+code {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .wrapper-box {
