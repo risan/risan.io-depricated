@@ -2,7 +2,16 @@ let ScriptTask = require('./gulp-tasks/ScriptTask');
 let StyleTask = require('./gulp-tasks/StyleTask');
 let gulp = require('gulp');
 
-gulp.task('default', ['scripts', 'styles']);
+gulp.task('default', ['loadCSS', 'scripts', 'styles']);
+
+gulp.task('loadCSS', function() {
+  return new ScriptTask({
+    src: './node_modules/fg-loadcss/src/loadCSS.js',
+    output: './_includes/assets/loadCSS.js',
+    sourcemaps: false,
+    transform: false,
+  }).gulpTask();
+});
 
 gulp.task('scripts', function() {
   return new ScriptTask({

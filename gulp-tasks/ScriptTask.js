@@ -22,6 +22,10 @@ class ScriptTask extends Task {
   }
 
   transform() {
+    if (this.options.transform === false) {
+      return this.stream();
+    }
+
     return babel();
   }
 

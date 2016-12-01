@@ -7,5 +7,8 @@
 <link rel="icon" type="image/png" href="{{ site.url }}/favicon-32x32.png" sizes="32x32">
 <meta name="description" content="{{ site.description }}">
 <meta name="author" content="{{ site.author }}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans:300,400,600">
-<link rel="stylesheet" href="{{ site.css_url }}/styles.css">
+<script>
+    {% include assets/loadCSS.js %}
+    loadCSS("https://fonts.googleapis.com/css?family=Lato:900|Work+Sans:300,400,600");
+    loadCSS("{{ site.css_url }}/styles.css");
+</script>
