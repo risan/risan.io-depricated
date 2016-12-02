@@ -8,10 +8,9 @@ author: Risan Bagja Pradana
 # Serving.
 port: 4001
 host: localhost
-baseurl: ""
 url: http://localhost:4001
-css_url: http://localhost:4001/assets/css
-js_url: http://localhost:4001/assets/js
+css_dir: assets/css
+js_dir: assets/js
 
 # Configuration.
 lang: en
@@ -51,7 +50,3 @@ exclude:
 keep_files:
   - .git
   - assets
-
-email: risanbagja@gmail.com
-twitter_username: jekyllrb
-github_username:  jekyll

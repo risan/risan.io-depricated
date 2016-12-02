@@ -1,10 +1,10 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>{{ site.title }}</title>
+<title>{% title %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="{{ site.url }}/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="{{ site.url }}/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="{% url apple-touch-icon.png %}">
+<link rel="icon" type="image/png" href="{% url favicon-16x16.png %}" sizes="16x16">
+<link rel="icon" type="image/png" href="{% url favicon-32x32.png %}" sizes="32x32">
 <meta name="description" content="{{ site.description }}">
 <meta name="author" content="{{ site.author }}">
 <style>
@@ -13,5 +13,5 @@
 <script>
     {% include assets/loadCSS.js %}
     loadCSS("https://fonts.googleapis.com/css?family=Lato:900|Work+Sans:300,400,600");
-    loadCSS("{{ site.css_url }}/styles.css");
+    loadCSS("{% css_url styles.css %}");
 </script>
