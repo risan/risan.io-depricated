@@ -62,4 +62,16 @@
     margin: 1.25rem auto;
     max-width: 100%;
   }
+
+  blockquote {
+    p {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+
+      @media (min-width: $screen-sm) {
+        font-size: 1.35rem;
+        line-height: 2rem;
+      }
+    }
+  }
 }
