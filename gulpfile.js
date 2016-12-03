@@ -1,3 +1,4 @@
+let ImageTask = require('./gulp-tasks/ImageTask');
 let ScriptTask = require('./gulp-tasks/ScriptTask');
 let StyleTask = require('./gulp-tasks/StyleTask');
 let gulp = require('gulp');
@@ -9,6 +10,21 @@ gulp.task('critical', function() {
     src: './_assets/sass/critical.scss',
     output: './_includes/assets/critical.css',
     sourcemaps: false,
+  }).gulpTask();
+});
+
+gulp.task('images', function() {
+  return new ImageTask({
+    src: './_assets/img/**/*.{gif,jpg,png}',
+    output: './_site/assets/img/*',
+    resize: {
+      width: 1200,
+      height: 0,
+      upscale: false,
+      crop: false,
+      gravity: 'center',
+      quality: 0.8
+    }
   }).gulpTask();
 });
 
