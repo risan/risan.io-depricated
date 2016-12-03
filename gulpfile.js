@@ -3,7 +3,7 @@ let ScriptTask = require('./gulp-tasks/ScriptTask');
 let StyleTask = require('./gulp-tasks/StyleTask');
 let gulp = require('gulp');
 
-gulp.task('default', ['critical', 'loadCSS', 'scripts', 'styles']);
+gulp.task('default', ['critical', 'images', 'loadCSS', 'scripts', 'styles']);
 
 gulp.task('critical', function() {
   return new StyleTask({
@@ -55,6 +55,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
+  gulp.watch('./_assets/img/**/*.{gif,jpg,png}', ['images']);
   gulp.watch('./_assets/js/**/*.js', ['scripts']);
   gulp.watch('./_assets/sass/**/*.scss', ['critical', 'styles']);
 });
