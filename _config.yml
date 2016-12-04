@@ -8,7 +8,7 @@ author: Risan Bagja Pradana
 # Serving.
 port: 4001
 host: localhost
-url: http://localhost:4001
+url: https://risan.io
 css_dir: assets/css
 img_dir: assets/img
 js_dir: assets/js

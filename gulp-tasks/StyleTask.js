@@ -1,5 +1,5 @@
 let autoprefixer = require('gulp-autoprefixer');
-let cssClean = require('gulp-clean-css');
+let cleanCss = require('gulp-clean-css');
 let gulp = require('gulp');
 let Task = require('./Task');
 let sass = require('gulp-sass');

@@ -3,19 +3,14 @@ let ScriptTask = require('./gulp-tasks/ScriptTask');
 let StyleTask = require('./gulp-tasks/StyleTask');
 let gulp = require('gulp');
 
-gulp.task('default', ['critical', 'images', 'loadCSS', 'scripts', 'styles']);
-
-gulp.task('critical', function() {
-  return new StyleTask({
-    src: './_assets/sass/critical.scss',
-    output: './_includes/assets/critical.css',
-    sourcemaps: false,
-  }).gulpTask();
-});
+gulp.task('default', ['images', 'logo', 'scripts', 'styles']);
 
 gulp.task('images', function() {
   return new ImageTask({
-    src: './_assets/img/**/*.{gif,jpg,png}',
+    src: [
+      './_assets/img/**/*.{gif,jpg,png}',
+      '!./_assets/img/logo.jpg'
+    ],
     output: './_site/assets/img/*',
     resize: {
       width: 1200,
@@ -28,19 +23,25 @@ gulp.task('images', function() {
   }).gulpTask();
 });
 
-gulp.task('loadCSS', function() {
-  return new ScriptTask({
-    src: './node_modules/fg-loadcss/src/loadCSS.js',
-    output: './_includes/assets/loadCSS.js',
-    sourcemaps: false,
-    transform: false,
+gulp.task('logo', function() {
+  return new ImageTask({
+    src: './_assets/img/logo.jpg',
+    output: './_site/assets/img/logo.jpg',
+    resize: {
+      width: 150,
+      height: 150,
+      upscale: false,
+      crop: false,
+      gravity: 'center',
+      quality: 1
+    }
   }).gulpTask();
 });
 
 gulp.task('scripts', function() {
   return new ScriptTask({
     src: './_assets/js/**/*.js',
-    output: './_site/assets/js/scripts.js'
+    output: './_includes/assets/scripts.js'
   }).gulpTask();
 });
 
@@ -50,12 +51,13 @@ gulp.task('styles', function() {
       './node_modules/normalize.css/normalize.css',
       './_assets/sass/theme.scss'
     ],
-    output: './_site/assets/css/styles.css'
+    output: './_includes/assets/styles.css',
+    sourcemaps: false
   }).gulpTask();
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./_assets/img/**/*.{gif,jpg,png}', ['images']);
+  gulp.watch('./_assets/img/**/*.{gif,jpg,png}', ['images', 'logo']);
   gulp.watch('./_assets/js/**/*.js', ['scripts']);
-  gulp.watch('./_assets/sass/**/*.scss', ['critical', 'styles']);
+  gulp.watch('./_assets/sass/**/*.scss', ['styles']);
 });
