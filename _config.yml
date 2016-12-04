@@ -38,6 +38,15 @@ defaults:
 gems:
   - jekyll-feed
   - jekyll-paginate
+  - octopress-minify-html
+
+# Minify HTML.
+minify_html: true
+html_press:
+  unquoted_attributes: false
+  drop_empty_values: true
+  strip_crlf: true
+  js_minifier_options: false
 
 # Directories.
 exclude:
