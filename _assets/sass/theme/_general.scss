@@ -8,58 +8,35 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: $font-main;
+  background-color: #fff;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: $font-heading;
-  font-weight: 900;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 a {
-  color: $blue-light;
   text-decoration: none;
-  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
-
-  &:hover {
-    color: $pink;
-    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-  }
 }
 
 p {
-  font-size: 1.15rem;
-  line-height: 1.8rem;
-  margin: 1rem 0;
-}
-
-blockquote {
-  margin: 1.8rem 0;
-  padding: 1rem;
-  border-left: 5px solid #eee;
-
-  @media (min-width: $screen-sm) {
-    border-left-width: 7px;
-  }
-
-  p:last-child {
-    margin: 0;
-  }
-}
-
-pre,
-code {
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.wrapper-box {
-  max-width: $wrapper-max-width;
-  padding: 0 $wrapper-padding;
-  box-sizing: border-box;
+  margin: 0 0 1rem 0;
 }
 
 .wrapper {
-  @extend .wrapper-box;
   margin: 0 auto;
+  padding: 0 $wrapper-padding;
+  max-width: $wrapper-max-width;
+  box-sizing: border-box;
 }

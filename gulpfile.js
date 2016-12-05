@@ -41,18 +41,14 @@ gulp.task('logo', function() {
 gulp.task('scripts', function() {
   return new ScriptTask({
     src: './_assets/js/**/*.js',
-    output: './_includes/assets/scripts.js'
+    output: './_site/assets/js/scripts.js'
   }).gulpTask();
 });
 
 gulp.task('styles', function() {
   return new StyleTask({
-    src: [
-      './node_modules/normalize.css/normalize.css',
-      './_assets/sass/theme.scss'
-    ],
-    output: './_includes/assets/styles.css',
-    sourcemaps: false
+    src: './_assets/sass/theme.scss',
+    output: './_site/assets/css/styles.css'
   }).gulpTask();
 });
 

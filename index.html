@@ -7,10 +7,12 @@ layout: index
             <h2>
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
+        </header>
+        <div class="post-excerpt">{{ post.excerpt }}</div>
+        <footer>
             <small class="post-meta">
                 <time datetime="{{ post.date | date: '%F' }}" pubdate>{{ post.date | date: "%B %-d, %Y" }}</time>
             </small>
-        </header>
-        <div class="post-excerpt">{{ post.excerpt }}</div>
+        </footer>
   </article>
 {% endfor %}
