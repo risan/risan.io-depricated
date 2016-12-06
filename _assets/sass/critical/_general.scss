@@ -68,6 +68,22 @@ img {
   margin: 1rem auto;
 }
 
+blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin: 1.5rem 0;
+  padding: 0.75rem;
+  border-left: 5px solid $header-bg-color;
+  background-color: #f7f7f7;
+  border-radius: $border-radius-base;
+
+  @media (min-width: $screen-sm) {
+    padding: 1rem;
+    border-left-size: 7px;
+  }
+}
+
 .wrapper {
   margin: 0 auto;
   padding: 2rem $wrapper-padding;
