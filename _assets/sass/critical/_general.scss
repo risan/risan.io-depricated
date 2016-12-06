@@ -62,6 +62,25 @@ p {
   }
 }
 
+ol, ul {
+  margin: 1.5rem 0;
+  padding: 0 0 0 1.75rem;
+
+  @media (min-width: $screen-sm) {
+    padding-left: 2rem;
+  }
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
 img {
   display: block;
   max-width: 100%;

@@ -7,4 +7,5 @@ group :jekyll_plugins do
   gem 'jekyll-feed', '0.8.0'
   gem 'jekyll-paginate', '1.1.0'
   gem 'octopress-minify-html', '1.3.1'
+  gem 'pygments.rb', '0.6.3'
 end

@@ -1,0 +1,33 @@
+p code,
+li code {
+  font-size: 85%;
+  color: #d14;
+  padding: 0.15rem 0.35rem;
+  background-color: #f7f7f7;
+  border-radius: $border-radius-base;
+}
+
+pre,
+pre.highlight {
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+  margin: 1rem 0;
+  padding: 10px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-radius: $border-radius-base;
+
+  @media (min-width: $screen-sm) {
+    font-size: 0.7rem;
+    margin: 1.5rem 0;
+    padding: 20px;
+  }
+
+  code {
+    font-size: 0.75rem;
+
+    @media (min-width: $screen-sm) {
+      font-size: 0.7rem;
+    }
+  }
+}
