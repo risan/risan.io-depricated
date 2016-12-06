@@ -1,0 +1,83 @@
+html {
+  font-size: $font-size-xs;
+
+  @media (min-width: $screen-sm) {
+    font-size: $font-size-sm;
+    line-height: 2rem;
+  }
+}
+
+body {
+  font-size: 1rem;
+  color: $color-main;
+  background-color: $bg-color;
+}
+
+h1, h2 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 115%;
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+
+  a:link,
+  a:visited {
+    color: $color-main;
+  }
+
+  a:active,
+  a:hover {
+    color: $color-primary;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $color-primary;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  a:active,
+  a:hover {
+    color: $color-primary-active;
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  }
+}
+
+p {
+  margin: 0 0 1.25rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 2rem $wrapper-padding;
+  max-width: $wrapper-max-width;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  @media (min-width: $screen-sm) {
+    width: $wrapper-sm-width;
+    margin: 3rem auto;
+    padding: 2 * $wrapper-padding;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  padding: $wrapper-padding;
+  background-color: $header-bg-color;
+
+  h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0;
+
+    a {
+      display: inline-block;
+      padding: 0.5rem;
+    }
+
+    a:link,
+    a:visited {
+      color: #333;
+      border: 1px solid #333;
+    }
+
+    a:active,
+    a:hover {
+      color: #333;
+      border-color: #333;
+    }
+  }
+}

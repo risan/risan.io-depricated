@@ -3,16 +3,14 @@ layout: index
 ---
 {% for post in paginator.posts %}
     <article>
-        <header>
-            <h2>
+        <header class="post-header">
+            <h2 class="post-title">
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
-        </header>
-        <div class="post-excerpt">{{ post.excerpt }}</div>
-        <footer>
             <small class="post-meta">
                 <time datetime="{{ post.date | date: '%F' }}" pubdate>{{ post.date | date: "%B %-d, %Y" }}</time>
             </small>
-        </footer>
+        </header>
+        <div>{{ post.excerpt }}</div>
   </article>
 {% endfor %}

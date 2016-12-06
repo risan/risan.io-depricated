@@ -1,5 +1,6 @@
 let changed = require('gulp-changed');
 let gulp = require('gulp');
+let gutil = require('gulp-util');
 let imagemin = require('gulp-imagemin');
 let imageResize = require('gulp-image-resize');
 let os = require('os');
@@ -35,6 +36,10 @@ class ImageTask extends Task {
   }
 
   changed() {
+    if (this.isForce()) {
+      return this.stream();
+    }
+
     return changed(this.options.output.dir);
   }
 
@@ -44,6 +49,10 @@ class ImageTask extends Task {
 
   getAvailableCpuCores() {
     return os.cpus().length;
+  }
+
+  isForce() {
+    return gutil.env.force === true;
   }
 }
 
