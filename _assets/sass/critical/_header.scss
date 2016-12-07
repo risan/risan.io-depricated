@@ -14,14 +14,14 @@
 
     a:link,
     a:visited {
-      color: #333;
-      border: 1px solid #333;
+      color: $color-main;
+      border: 1px solid $color-main;
     }
 
     a:active,
     a:hover {
-      color: #333;
-      border-color: #333;
+      color: $color-main;
+      border-color: $color-main;
     }
   }
 }

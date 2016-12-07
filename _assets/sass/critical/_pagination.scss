@@ -1,0 +1,40 @@
+.pagination {
+  @include clearfix;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f4f4f4;
+}
+
+.btn-pagination {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 135px;
+  padding: 0.5rem;
+
+  &:link,
+  &:visited {
+    color: $color-main;
+    border: 1px solid $color-main;
+  }
+
+  &:active,
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  @media (min-width: $screen-sm) {
+    font-size: 0.9rem;
+    width: 190px;
+    padding: 0.75rem;
+  }
+}
+
+.btn-older-posts {
+  float: right;
+}

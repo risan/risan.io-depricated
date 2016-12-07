@@ -3,6 +3,11 @@
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #f4f4f4;
+
+    &:last-of-type {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
   }
 }
 
