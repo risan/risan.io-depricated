@@ -1,29 +1,42 @@
 class App {
   constructor() {
+    this.elementFinder = new ElementFinder();
+    this.elementCreator = new ElementCreator();
     this.loadElements();
     this.attachEventListeners();
   }
 
   loadElements() {
     this.$el = {
-      navbar: new Element(document.getElementsByClassName('navbar')[0]),
-      navbarToogle: new Element(document.getElementsByClassName('navbar-toggle')[0])
+      body: this.elementFinder.findByTag('body'),
+      navbar: this.elementFinder.findById('navbar'),
+      btnNavbarOpen: this.elementFinder.findById('btn-navbar-open'),
+      btnNavbarClose: this.elementFinder.findById('btn-navbar-close'),
+      overlay: this.elementCreator.create('div', { id: 'overlay', classes: 'overlay' })
     };
   }
 
   attachEventListeners() {
-    let self = this;
-
-    this.$el.navbarToogle.addEventListener('click', function(e) {
-      self.toogleNav(e);
-    });
+    this.$el.btnNavbarOpen.addEventListener('click', e => this.openNavbar());
+    this.$el.btnNavbarClose.addEventListener('click', e => this.closeNavbar());
+    this.$el.overlay.addEventListener('click', e => this.closeNavbar());
   }
 
-  toogleNav(e) {
-    e.preventDefault();
-    this.$el.navbar.toogleClass('navbar-open');
+  openNavbar() {
+    this.$el.navbar.addClass('navbar-open');
+    this.addNavbarOverlay();
+  }
 
-    let toogleNavText = this.$el.navbar.hasClass('navbar-open') ? 'Close' : 'Menu';
-    this.$el.navbarToogle.text(toogleNavText);
+  closeNavbar() {
+    this.$el.navbar.removeClass('navbar-open');
+    this.removeNavbarOverlay();
+  }
+
+  addNavbarOverlay() {
+    this.$el.body.append(this.$el.overlay);
+  }
+
+  removeNavbarOverlay() {
+    this.elementFinder.findById('overlay').remove();
   }
 }

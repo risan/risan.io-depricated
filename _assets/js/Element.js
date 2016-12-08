@@ -3,6 +3,12 @@ class Element {
     this.$el = $el;
   }
 
+  setAttribute(name, value) {
+    this.$el.setAttribute(name, value);
+
+    return this;
+  }
+
   text(content) {
     this.$el.textContent = content;
 
@@ -61,6 +67,20 @@ class Element {
 
   setClasses(classes) {
     this.$el.className = classes.join(' ').replace(/^\s+|\s+$/, '');
+
+    return this;
+  }
+
+  append(element) {
+    this.$el.appendChild(element.$el);
+
+    return this;
+  }
+
+  remove() {
+    if (this.$el.parentNode) {
+      this.$el.parentNode.removeChild(this.$el);
+    }
 
     return this;
   }

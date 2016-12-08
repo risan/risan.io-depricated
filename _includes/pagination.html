@@ -1,12 +1,12 @@
 {% if paginator.total_pages > 1 %}
     <nav class="pagination">
         {% if paginator.previous_page %}
-            <a class="btn-pagination btn-newer-posts" href="{{ paginator.previous_page_path }}" title="Newer Posts" rel="prev">
+            <a class="btn-pagination btn-pagination-newer" href="{{ paginator.previous_page_path }}" title="Newer Posts" rel="prev">
                 &larr; Newer Posts
             </a>
         {% endif %}
         {% if paginator.next_page %}
-            <a class="btn-pagination btn-older-posts" href="{{ paginator.next_page_path }}" title="Older Posts" rel="next">
+            <a class="btn-pagination btn-pagination-older" href="{{ paginator.next_page_path }}" title="Older Posts" rel="next">
                 Older Posts &rarr;
             </a>
         {% endif %}
