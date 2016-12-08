@@ -1,0 +1,81 @@
+.navbar {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  right: -$navigation-xs-width;
+  width: $navigation-xs-width;
+  height: 100%;
+  padding: 15px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: $navigation-bg-color;
+  visibility: hidden;
+  transition: right 0.15s ease-out;
+
+  &.navbar-open {
+    right: 0;
+    visibility: visible;
+    transition: right 0.25s ease-in;
+  }
+
+  @media (min-width: $screen-sm) {
+    right: -$navigation-sm-width;
+    width: $navigation-sm-width;
+    padding: 20px;
+  }
+}
+
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navbar-btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.2rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 2px solid $color-main;
+  background-color: transparent;
+
+  &:link,
+  &:visited {
+    color: $color-main;
+    border-color: $color-main;
+  }
+
+  &:active,
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.navbar-close-btn {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+
+  &:hover {
+    color: #fff;
+    background-color: #d73925;
+    border-color: #d73925;
+  }
+}
+
+.overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.7;
+}

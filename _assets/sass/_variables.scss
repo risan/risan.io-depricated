@@ -14,6 +14,8 @@ $color-main: #333;
 $color-primary: #5694f1;
 $color-primary-active: #eb298c;
 
+$border-radius-base: 3px;
+
 // Wrapper.
 $bg-color: #f7f7f7;
 $wrapper-padding: 20px;
@@ -23,4 +25,7 @@ $wrapper-max-width: 800px;
 // Header.
 $header-bg-color: #ffe200;
 
-$border-radius-base: 3px;
+// Navigation.
+$navigation-bg-color: #fff;
+$navigation-xs-width: 240px;
+$navigation-sm-width: 320px;
