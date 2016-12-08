@@ -1,27 +1,35 @@
 .header {
+  @include clearfix;
   padding: $wrapper-padding;
   background-color: $header-bg-color;
 
-  h1 {
+  .logo {
     font-size: 1rem;
-    text-transform: uppercase;
+    display: inline-block;
     margin: 0;
 
     a {
-      display: inline-block;
-      padding: 0.5rem;
-    }
-
-    a:link,
-    a:visited {
       color: $color-main;
-      border: 1px solid $color-main;
-    }
-
-    a:active,
-    a:hover {
-      color: $color-main;
-      border-color: $color-main;
     }
   }
+}
+
+.header-btn {
+  font-size: 1rem;
+  font-family: $font-heading;
+  font-weight: 600;
+  color: $color-main;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+  display: inline-block;
+  width: 6rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid $color-main;
+  box-sizing: border-box;
+}
+
+.btn-toggle-menu {
+  float: right;
 }

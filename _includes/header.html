@@ -1,7 +1,18 @@
 <header class="header">
-    <h1>
-        <a href="{% site_url %}">
-            {{ site.heading }}
-        </a>
-    </h1>
+    {% if paginator %}
+        <h1 class="logo">
+            <a href="{% site_url %}" class="header-btn">
+                {{ site.heading }}
+            </a>
+        </h1>
+    {% else %}
+        <div class="logo">
+            <a href="{% site_url %}" class="header-btn">
+                {{ site.heading }}
+            </a>
+        </div>
+    {% endif %}
+    <button type="button" class="header-btn btn-toggle-menu">
+        Menu
+    </button>
 </header>
