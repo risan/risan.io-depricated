@@ -23,12 +23,12 @@ class App {
   }
 
   openNavbar() {
-    this.$el.navbar.addClass('navbar-open');
+    this.$el.body.addClass('navbar-open');
     this.addNavbarOverlay();
   }
 
   closeNavbar() {
-    this.$el.navbar.removeClass('navbar-open');
+    this.$el.body.removeClass('navbar-open');
     this.removeNavbarOverlay();
   }
 
