@@ -75,7 +75,6 @@
 }
 
 .overlay {
-  display: none;
   z-index: 2;
   position: fixed;
   top: 0;
@@ -83,12 +82,5 @@
   bottom: 0;
   left: 0;
   background-color: #000;
-  opacity: 0;
-}
-
-.navbar-open {
-  .overlay {
-    display: block;
-    opacity: 0.7;
-  }
+  opacity: 0.7;
 }
