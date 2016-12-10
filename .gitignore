@@ -1,5 +1,6 @@
 _site
 _posts
+_config.yml
 node_modules
 Gemfile.lock
 yarn.lock

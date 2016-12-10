@@ -1,7 +1,7 @@
-title: Risan's Programming Blog
-heading: Risan
-description: Risan Bagja on software development and coding practice.
-author: Risan Bagja Pradana
+title: Your Default Website's Title Tag
+heading: Website Title
+description: Your website's description goes here.
+author: John Doe
 
 # Serving.
 port: 4001
@@ -14,7 +14,7 @@ js_dir: assets/js
 # Configuration.
 lang: en
 encoding: utf-8
-timezone: Europe/Stockholm
+timezone: US/Central
 markdown: kramdown
 highlighter: pygments
 permalink: /:title.html
