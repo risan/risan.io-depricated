@@ -9,8 +9,7 @@
   overflow-y: auto;
   box-sizing: border-box;
   background-color: $navigation-bg-color;
-  visibility: hidden;
-  transition: all 0.15s ease-in;
+  transition: right 0.15s ease-in;
 
   @media (min-width: $screen-sm) {
     right: -$navigation-sm-width;
@@ -25,8 +24,7 @@
 
   .navbar {
     right: 0;
-    visibility: visible;
-    transition: all 0.25s ease-out;
+    transition: right 0.25s ease-out;
   }
 }
 
